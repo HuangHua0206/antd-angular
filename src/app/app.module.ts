@@ -12,9 +12,10 @@ import zh from '@angular/common/locales/zh';
 import { HeroesComponent } from './heroes/heroes.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { AppRoutingModule } from '../router/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { HeaderComponent } from '../pages/layout/header/header.component';
+import { SidebarComponent } from '../pages/layout/sidebar/sidebar.component';
+import { AppRoutingModule }     from '../router/app-routing.module';
 registerLocaleData(zh);
 
 @NgModule({
@@ -23,7 +24,9 @@ registerLocaleData(zh);
     HeroesComponent,
     HeroDetailComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
