@@ -16,6 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from '../pages/layout/header/header.component';
 import { SidebarComponent } from '../pages/layout/sidebar/sidebar.component';
 import { AppRoutingModule }     from '../router/app-routing.module';
+import { MessagesComponent } from './messages/messages.component';
 registerLocaleData(zh);
 
 @NgModule({
@@ -26,7 +27,8 @@ registerLocaleData(zh);
     DashboardComponent,
     LoginComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
