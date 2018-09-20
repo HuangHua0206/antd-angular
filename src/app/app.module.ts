@@ -21,24 +21,11 @@ registerLocaleData(zh);
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    DashboardComponent,
-    LoginComponent,
-    HeaderComponent,
-    SidebarComponent,
-    MessagesComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    NgZorroAntdModule,
     AppRoutingModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
