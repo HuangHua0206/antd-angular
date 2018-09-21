@@ -9,7 +9,7 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { DashboardComponent }   from '../app/dashboard/dashboard.component';
 import { HeroesComponent }      from '../app/heroes/heroes.component';
 import { HeroDetailComponent }  from '../app/hero-detail/hero-detail.component';
-import { LoginComponent }  from '../pages/login/login.component';
+import { LoginComponent }  from '../pages/login/login';
 import { LayoutComponent }  from '../pages/layout/index.component';
 import { SidebarComponent }  from '../pages/layout/sidebar/sidebar.component';
 import { HeaderComponent }  from '../pages/layout/header/header.component';
