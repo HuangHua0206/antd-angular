@@ -6,11 +6,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
-import { DashboardComponent }   from '../app/dashboard/dashboard.component';
-import { HeroesComponent }      from '../app/heroes/heroes.component';
-import { HeroDetailComponent }  from '../app/hero-detail/hero-detail.component';
-import { LoginComponent }  from '../pages/login/login';
-import { LayoutComponent }  from '../pages/layout/index';
+import { DashboardComponent }   from '@app/dashboard/dashboard.component';
+import { HeroesComponent }      from '@app/heroes/heroes.component';
+import { HeroDetailComponent }  from '@app/hero-detail/hero-detail.component';
+import { LoginComponent }  from '@pages/login/login';
+import { LayoutComponent }  from '@pages/layout/index';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
