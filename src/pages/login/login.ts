@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, Route } from '@angular/router';
-import { setItem } from '../../utils/storage.ts'
+import { setItem } from '@utils/storage.ts';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +8,7 @@ import { setItem } from '../../utils/storage.ts'
   templateUrl: './login.html'
 })
 export class LoginComponent {
-	constructor(private router: Router;) {}
+	constructor(private router: Router) {}
 	Login(): void {
 	    setItem('user', {userId: '123', userName: this.username})
 	    this.router.navigate(['/heroes'])

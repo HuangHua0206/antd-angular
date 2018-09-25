@@ -1,5 +1,5 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { getItem, removeItem } from '../../utils/storage.ts'
+import { getItem, removeItem } from '@utils/storage.ts';
 import { Router, Route } from '@angular/router';
 
 @Component({
@@ -12,8 +12,9 @@ export class LayoutComponent {
   username = getItem('user') ? getItem('user').userName : ''
   isCollapsed = false;
   triggerTemplate = null;
+   @ViewChild('trigger') customTrigger: TemplateRef<void>;
   constructor(private router: Router;) {}
-  @ViewChild('trigger') customTrigger: TemplateRef<void>;
+ 
 
   // 当用户信息失效或被清除时，退出登录界面
   ngOnInit() { 
@@ -21,6 +22,7 @@ export class LayoutComponent {
   		this.router.navigate(['/login'])
   	}
   }
+  /** custom trigger can be TemplateRef **/
   changeTrigger(): void {
     this.triggerTemplate = this.customTrigger;
   }
