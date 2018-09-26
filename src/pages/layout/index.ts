@@ -1,5 +1,5 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { getItem, removeItem } from '@utils/storage.ts';
+import { getItem, removeItem } from '@utils/storage';
 import { Router, Route } from '@angular/router';
 
 @Component({
@@ -8,12 +8,12 @@ import { Router, Route } from '@angular/router';
   styleUrls: ['./index.less']
 })
 
-export class LayoutComponent {
-  username = getItem('user') ? getItem('user').userName : ''
-  isCollapsed = false;
-  triggerTemplate = null;
+export class LayoutComponent { 
+   username = getItem('user') ? getItem('user').userName : '';
+   isCollapsed = false;
+   triggerTemplate = null;
    @ViewChild('trigger') customTrigger: TemplateRef<void>;
-  constructor(private router: Router;) {}
+  constructor(private router: Router) {}
  
 
   // 当用户信息失效或被清除时，退出登录界面
