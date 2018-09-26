@@ -11,9 +11,10 @@ import { HeroesComponent }      from '@app/heroes/heroes.component';
 import { HeroDetailComponent }  from '@app/hero-detail/hero-detail.component';
 import { LoginComponent }  from '@pages/login/login';
 import { LayoutComponent }  from '@pages/layout/index';
+import { HomeComponent }  from '@pages/home/home';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { 
   	path: 'heroes', 
@@ -21,6 +22,13 @@ const routes: Routes = [
   	children: [
   		{path: '', component: HeroesComponent}, 
   	]
+  },
+   { 
+    path: 'home', 
+    component: LayoutComponent,
+    children: [
+      {path: '', component: HomeComponent}, 
+    ]
   },
 ];
  
@@ -30,6 +38,7 @@ const routes: Routes = [
 		LayoutComponent,
     HeroesComponent,
     HeroDetailComponent,
+    HomeComponent,
     DashboardComponent
   	],
     imports: [ 
@@ -40,7 +49,7 @@ const routes: Routes = [
 	    NgZorroAntdModule,
 	    RouterModule.forRoot(routes)
     ],
-    providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+    providers: [{ provide: NZ_I18N, useValue: zh_CN } ],
     exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

@@ -5,6 +5,7 @@
     "types": [],
     "baseUrl": "",
     "paths": {
+      "@api/*": ["api/*"],
       "@app/*": ["app/*"],
       "@components/*": ["components/*"],
       "@environments/*": ["environments/*"],

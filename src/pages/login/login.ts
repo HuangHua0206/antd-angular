@@ -13,6 +13,6 @@ export class LoginComponent {
 	constructor(private router: Router) {}
 	Login(): void {
 	    setItem('user', {userId: '123', userName: this.username}, false)
-	    this.router.navigate(['/heroes'])
+	    this.router.navigate(['/home'])
 	}
 }

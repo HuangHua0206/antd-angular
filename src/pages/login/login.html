@@ -1,10 +1,10 @@
 <div class="login-wrap">
 	<div class="form">
 		<nz-input-group [nzSuffix]="suffixTemplate" nzPrefixIcon="anticon anticon-user">
-	      <input type="text" nz-input placeholder="用户名" [(ngModel)]="username">
+	      <input type="text" nz-input placeholder="用户名" [(ngModel)]="username" >
 	    </nz-input-group>
 	    <nz-input-group style="margin: 20px 0" [nzSuffix]="suffixTemplate" nzPrefixIcon="anticon anticon-lock">
-	      <input type="password" nz-input placeholder="密码" [(ngModel)]="password">
+	      <input type="password" nz-input placeholder="密码" [(ngModel)]="password"  (keyup.enter)="Login()">
 	    </nz-input-group>
 	    <button class="login-btn" nz-button nzType="primary" 
 	     (click)="Login()"
