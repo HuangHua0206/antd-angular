@@ -17,7 +17,7 @@ export class BaseInterceptor implements HttpInterceptor {
   intercept(req, next: HttpHandler) {
 
     let newReq = req.clone({
-      url:  `${req.url}` ,
+      url: baseurl + `${req.url}` ,
     });
     /*此处设置额外的头部，token常用于登陆令牌*/
     if(!req.cancelToken) {
