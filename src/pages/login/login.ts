@@ -11,7 +11,6 @@ import { LoginService } from '@api/loginService';
 export class LoginComponent {
 	username = ''
 	password = ''
-	resultData = {}
 
 	constructor(
 		private router: Router,

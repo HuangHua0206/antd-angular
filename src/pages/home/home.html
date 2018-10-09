@@ -1,4 +1,5 @@
  <nz-table
+ *ngIf="anyList"
   #rowSelectionTable
   [nzData]="anyList"
   (nzPageIndexChange)="refreshStatus()"

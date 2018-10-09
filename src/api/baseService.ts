@@ -46,10 +46,8 @@ export class BaseService {
         requestUrl += '&' + key + '=' + value
     }
     if(!requestUrl.includes('?')) { 
-      console.log(999)
       requestUrl = requestUrl.replace('&', '?')
     }
-    console.log(requestUrl)
     return new Promise((resolve, reject) => {
       this.http.get(requestUrl).subscribe(
         res => resolve(res), // success path

@@ -6,11 +6,10 @@ import { HomeService } from '@api/homeService';
   templateUrl: './home.html'
 })
 export class HomeComponent {
-	public anyList: array
 	constructor(private homeService: HomeService) {}
 
 	ngOnInit() {    
-		this.getData()	  
+		this.getData()	
 	}
 
 	async getData() {
