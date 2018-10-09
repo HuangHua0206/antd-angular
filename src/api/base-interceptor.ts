@@ -9,6 +9,7 @@ import {
 import { throwError } from 'rxjs'
 import { catchError, retry } from 'rxjs/operators';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { getItem } from '@utils/storage';
 
 
 
@@ -21,11 +22,13 @@ export class BaseInterceptor implements HttpInterceptor {
  
     let newReq = req.clone();
     /*此处设置额外的头部，token常用于登陆令牌*/
-    if(!req.cancelToken) {
-	  /*token数据来源自己设置，我常用localStorage存取相关数据*/
+    if(!req.cancelToken && getItem('user') && getItem('user').token) {
+       /*token数据来源自己设置，我常用localStorage存取相关数据*/
       newReq.headers = 
-      newReq.headers.set('token', 'my-new-auth-token')
+      newReq.headers.set('token', getItem('user').token)
+
     }
+ 
 
     // send cloned request with header to the next handler.
     return next.handle(newReq)

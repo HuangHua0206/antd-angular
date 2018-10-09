@@ -27,7 +27,7 @@ export class LoginComponent {
 		const resultData =  await this.loginService.login(o)  
 
         console.log('resultData==>', resultData)
-	    setItem('user', {userId: '123', userName: this.username}, false)
+	    setItem('user', {userId: '123', userName: this.username, token: resultData.data.token}, false)
 	    this.router.navigate(['/home'])
 	}
 }

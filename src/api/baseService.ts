@@ -8,12 +8,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NzMessageService } from 'ng-zorro-antd';
 import { getItem } from '@utils/storage';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
-
- 
-const baseurl = 'http://localhost:4200';
 
 @Injectable({ providedIn: 'root' })
 export class BaseService {
@@ -28,10 +22,11 @@ export class BaseService {
    *  params
    */
   public request(params: any): any {
+ 
     // 本地mock情况下
     if (getItem('isTest')) { 
       params['method'] = 'get'
-      params['url'] = baseurl + params['testUrl']
+      params['url'] = window.location.origin + params['testUrl']
       /*设置请求的基地址，方便替换*/
     } else {
       delete params['testUrl']
@@ -90,7 +85,8 @@ export class BaseService {
    * 处理请求成功
    *  res
    */
-  private handleSuccess(res: Response) {
+  private handleSuccess(res) {
+    console.log(res, 'res')
     /* 根据不同接口习惯，这里默认code为0是成功，1是接口出错，可根据项目修改*/
     if(res.code === 0) {
       return res
