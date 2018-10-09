@@ -10,7 +10,7 @@ export class LoginService {
   login(oData) {
   	return this.baseService.request({
       method: 'POST',
-      url: "http://sc1re.fuyhui.com/shopApp/pub/userAccount/login",
+      url: "/assets/json/login.json",
       data: oData,
     });
   }

@@ -14,7 +14,7 @@ export class HomeComponent {
 	}
 
 	async getData() {
-		const o = { a: 9, b: 'ppp'}
+		const o = { a: null, b: 'ppp'}
 		const resultData = await this.homeService.getHomeList(o)
 		this.anyList = resultData.data
 	}

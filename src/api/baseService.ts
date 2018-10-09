@@ -5,17 +5,15 @@
  */
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
 import { NzMessageService } from 'ng-zorro-antd';
-
+import { getItem } from '@utils/storage';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
  
+const baseurl = 'http://localhost:4200';
 
 @Injectable({ providedIn: 'root' })
 export class BaseService {
@@ -30,6 +28,21 @@ export class BaseService {
    *  params
    */
   public request(params: any): any {
+    // 本地mock情况下
+    if (getItem('isTest')) { 
+      params['method'] = 'get'
+      params['url'] = baseurl + params['testUrl']
+      /*设置请求的基地址，方便替换*/
+    } else {
+      delete params['testUrl']
+    }
+
+
+    for(let [key, value] of Object.entries(params['data'])) {
+      if(value === null) {
+        delete params['data'][key]
+      }
+    }
     if (params['method'] == 'post' || params['method'] == 'POST') {
       return this.post(params['url'], params['data']);
     }
@@ -63,7 +76,6 @@ export class BaseService {
    * post请求
    * url 接口地址
    * params 参数
-   *  Promise<R>|Promise<U>
    */
   public post(url: string, params: any) {
     return new Promise((resolve, reject) => {
@@ -83,7 +95,7 @@ export class BaseService {
     if(res.code === 0) {
       return res
     } else {
-      alert(res.message)
+      this.message.create('error', res.message);
       return false
     }
   }
@@ -94,7 +106,7 @@ export class BaseService {
    */
    
   private handleError(error) {
-    console.log(error);
+    console.log('error==?', error);
     let msg = '请求失败';
     switch (error.status) {
       case 400:

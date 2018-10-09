@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { COMPONENTS, routes } from '@router/router'
-
+import { httpInterceptorProviders } from '@api/base-interceptor'
  
 @NgModule({
 	declarations: [
@@ -21,7 +21,7 @@ import { COMPONENTS, routes } from '@router/router'
 	    NgZorroAntdModule,
 	    RouterModule.forRoot(routes)
     ],
-    providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+    providers: [{ provide: NZ_I18N, useValue: zh_CN }, httpInterceptorProviders[0]],
     exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
