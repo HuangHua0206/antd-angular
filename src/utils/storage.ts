@@ -1,3 +1,8 @@
+/**
+ * name:http服务
+ * describe:本地存储
+ * author: huanghua  2018/9/25
+ */
 /** setItem 设置本地存储
  *  key     String    储存名
  *  value   any       储存值

@@ -1,3 +1,8 @@
+/**
+ * name:http服务
+ * describe:路由
+ * author: huanghua  2018/9/17
+ */
 import { LoginComponent }  from '@pages/login/login';
 import { LayoutComponent }  from '@pages/layout/index';
 import { HomeComponent }  from '@pages/home/home';

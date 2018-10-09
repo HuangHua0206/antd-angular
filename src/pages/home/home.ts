@@ -6,6 +6,7 @@ import { HomeService } from '@api/homeService';
   templateUrl: './home.html'
 })
 export class HomeComponent {
+	private anyList
 	constructor(private homeService: HomeService) {}
 
 	ngOnInit() {    
