@@ -16,16 +16,18 @@ export class LoginComponent {
 	constructor(
 		private router: Router,
 		private loginService: LoginService
-		) {}
-	async Login(): void {
-		const resultData =  await this.loginService.login({
+	) {}
+	async Login() {
+		const o = {
       		mobile: "13627140650",
 			openId: null,
 			password: "19920206hua",
 			verifyCode: "fgih",
 			verifyCodeKey: "153897937374418194842"
-      	})  
- console.log('resultData==>', resultData)
+      	}
+		const resultData =  await this.loginService.login(o)  
+
+        console.log('resultData==>', resultData)
 	    setItem('user', {userId: '123', userName: this.username}, false)
 	    this.router.navigate(['/home'])
 	}
