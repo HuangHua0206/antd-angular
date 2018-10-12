@@ -5,6 +5,7 @@
     "types": [],
     "baseUrl": "",
     "paths": {
+      "@src/*": ["*"],
       "@admin/*": ["admin/*"],
       "@api/*": ["api/*"],
       "@app/*": ["app/*"],
@@ -13,7 +14,8 @@
       "@less/*": ["less/*"],
       "@pages/*": ["pages/*"],
       "@router/*": ["router/*"],
-      "@utils/*": ["utils/*"],
+      "@store/*": ["store/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "exclude": [

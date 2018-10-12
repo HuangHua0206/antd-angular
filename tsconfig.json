@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "",
     "paths": {
+      "@src/*": ["*"],
       "@admin/*": ["admin/*"],
       "@api/*": ["api/*"],
       "@app/*": ["app/*"],
@@ -11,6 +12,7 @@
       "@less/*": ["less/*"],
       "@pages/*": ["pages/*"],
       "@router/*": ["router/*"],
+      "@store/*": ["store/*"],
       "@utils/*": ["utils/*"],
     },
     "outDir": "./dist/out-tsc",

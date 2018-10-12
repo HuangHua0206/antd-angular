@@ -6,17 +6,32 @@
            {{ !isCollapsed ? 'XX管理系统' : 'XX...' }} 
         </div>
         <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-          <li nz-submenu routerLink="/home">
-            <span title><i class="anticon anticon-user"></i><span class="nav-text">待审核</span></span>
-          </li>
           <li nz-submenu>
-            <span title><i class="anticon anticon-team"></i><span class="nav-text">重点关注</span></span>
-            <ul>
-              <li nz-menu-item routerLink="/page_one">页面1</li>
-              <li nz-menu-item routerLink="/page_two">页面2</li>
-            </ul>
-          </li>
-          <li nz-menu-item><span><i class="anticon anticon-file"></i><span class="nav-text">File</span></span></li>
+        <span title><i class="anticon anticon-setting"></i> Navigation Three</span>
+        <ul>
+          <li nz-menu-item>Option 9</li>
+          <li nz-menu-item>Option 10</li>
+          <li nz-menu-item>Option 11</li>
+        </ul>
+      </li>
+        <li class="ng-tns-c1-0 ant-menu-submenu ant-menu-submenu-inline" routerLink="/home" style="padding-left: 24px;height:43px;line-height: 43px">
+            <span title><i style="margin-right: 10px" class="anticon anticon-user"></i><span class="nav-text">待审核</span></span>
+        </li>
+
+        <li    class="ng-tns-c1-0 ant-menu-submenu ant-menu-submenu-inline ant-menu-submenu-open">
+          <div _ngcontent-c1="" class="ng-tns-c1-0 ant-menu-submenu-title" cdkoverlayorigin="" style="padding-left: 24px;"><span _ngcontent-c0="" title="">
+             <i _ngcontent-c0="" class="anticon anticon-setting"></i> 重点关注</span><i _ngcontent-c1="" class="ng-tns-c1-0 ant-menu-submenu-arrow"></i>
+          </div>
+          <ul _ngcontent-c1="" class="ng-tns-c1-0 ng-trigger ng-trigger-expandAnimation ant-menu ant-menu-inline ant-menu-sub ng-star-inserted" style="height: 0px; overflow: hidden;">
+            <ul _ngcontent-c0="" class="ng-star-inserted" style="">
+              <li _ngcontent-c0="" nz-menu-item="" class="ant-menu-item" style="padding-left: 48px;">页面1</li>
+              <li _ngcontent-c0="" nz-menu-item="" class="ant-menu-item" style="padding-left: 48px;">页面2</li>
+            </ul> 
+          </ul>
+         
+     
+        </li>
+        <li _ngcontent-c0="" nz-menu-item="" class="ant-menu-item" style="padding-left: 24px;"><span _ngcontent-c0=""><i _ngcontent-c0="" class="anticon anticon-file"></i><span _ngcontent-c0="" class="nav-text">File</span></span></li>
         </ul>
       </nz-sider>
       <nz-layout>
