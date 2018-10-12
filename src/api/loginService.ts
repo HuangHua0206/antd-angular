@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BaseService } from '@api/baseService'
+import { BaseService } from 'api/baseService'
  
 
 @Injectable({

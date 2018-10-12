@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { HomeService } from '@api/homeService';
+import { HomeService } from 'api/homeService';
 import { Store } from '@ngrx/store';
-import { AppState } from '@app/tutorial.state';
-import * as TutorialActions from '@app/tutorial.action';
+import { AppState } from 'app/tutorial.state';
+import * as TutorialActions from 'app/tutorial.action';
 @Component({
   selector: 'app-home',
   styleUrls: [ './home.less' ],

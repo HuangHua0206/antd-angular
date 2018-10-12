@@ -9,7 +9,7 @@ import {
 import { throwError } from 'rxjs'
 import { catchError, retry } from 'rxjs/operators';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { getItem } from '@utils/storage';
+import { getItem } from 'utils/storage';
 
 
 

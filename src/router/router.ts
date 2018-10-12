@@ -3,12 +3,12 @@
  * describe:路由
  * author: huanghua  2018/9/17
  */
-import { LoginComponent }  from '@pages/login/login';
-import { LayoutComponent }  from '@pages/layout/index';
-import { HomeComponent }  from '@pages/home/home';
-import { PageoneComponent }  from '@pages/demos/pageone';
-import { PagetwoComponent }  from '@pages/demos/pagetwo';
-import { PagethreeComponent }  from '@pages/demos/pagethree';
+import { LoginComponent }  from 'pages/login/login';
+import { LayoutComponent }  from 'pages/layout/index';
+import { HomeComponent }  from 'pages/home/home';
+import { PageoneComponent }  from 'pages/demos/pageone';
+import { PagetwoComponent }  from 'pages/demos/pagetwo';
+import { PagethreeComponent }  from 'pages/demos/pagethree';
 // 角色类型
 const roles = {
   'r1': 'superadmin', // 超级管理员

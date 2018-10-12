@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, Route } from '@angular/router';
-import { setItem } from '@utils/storage';
-import { LoginService } from '@api/loginService';
+import { setItem } from 'utils/storage';
+import { LoginService } from 'api/loginService';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { Tutorial } from '@app/tutorial.module';
-import { AppState } from '@app/tutorial.state';
-import * as TutorialActions from '@app/tutorial.action';
+import { Tutorial } from 'app/tutorial.module';
+import { AppState } from 'app/tutorial.state';
+import * as TutorialActions from 'app/tutorial.action';
 
 @Component({
   selector: 'app-login',

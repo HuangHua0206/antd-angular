@@ -1,5 +1,5 @@
 import { Component, TemplateRef, ViewChild, AfterViewInit, OnInit, OnDestroy } from '@angular/core';
-import { getItem, removeItem } from '@utils/storage';
+import { getItem, removeItem } from 'utils/storage';
 import { Router, Route } from '@angular/router';
 import { menus } from './sideConfig';
 
