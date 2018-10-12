@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "",
     "paths": {
+      "@admin/*": ["admin/*"],
       "@api/*": ["api/*"],
       "@app/*": ["app/*"],
       "@components/*": ["components/*"],

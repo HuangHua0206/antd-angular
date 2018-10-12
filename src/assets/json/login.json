@@ -2,6 +2,7 @@
     "code": 0,
     "message": "成功!",
     "data": {
-        "token": "17897"
+        "token": "17897",
+        "role": "admin"
     }  
 }

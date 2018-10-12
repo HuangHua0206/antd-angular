@@ -1,18 +1,20 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, ViewChild, AfterViewInit, OnInit, OnDestroy } from '@angular/core';
 import { getItem, removeItem } from '@utils/storage';
 import { Router, Route } from '@angular/router';
+import { menus } from './sideConfig';
 
 @Component({
   selector: 'app-main',
   templateUrl: './index.html',
   styleUrls: ['./index.less']
 })
-
-export class LayoutComponent { 
+ 
+export class LayoutComponent implements  OnInit{ 
    username = getItem('user') ? getItem('user').userName : '';
    isCollapsed = false;
    triggerTemplate = null;
-   @ViewChild('trigger') customTrigger: TemplateRef<void>;
+   public menus: any = menus;
+ 
   constructor(private router: Router) {}
  
 
@@ -21,11 +23,9 @@ export class LayoutComponent {
   	if(!getItem('user')) {
   		this.router.navigate(['/login'])
   	}
+
   }
-  /** custom trigger can be TemplateRef **/
-  changeTrigger(): void {
-    this.triggerTemplate = this.customTrigger;
-  }
+  
   // 退出登录方法
   logout(): void {
     removeItem('user')
