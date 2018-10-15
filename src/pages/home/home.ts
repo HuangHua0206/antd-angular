@@ -3,6 +3,7 @@ import { HomeService } from 'api/homeService';
 import { Store } from '@ngrx/store';
 import { AppState } from 'app/tutorial.state';
 import * as TutorialActions from 'app/tutorial.action';
+import { getItem } from 'utils/storage';
 @Component({
   selector: 'app-home',
   styleUrls: [ './home.less' ],
@@ -13,8 +14,8 @@ export class HomeComponent {
 	constructor(private homeService: HomeService,
 		private store: Store<AppState>) {}
 
-	ngOnInit() {    
-		this.getData()	
+	ngOnInit() { 
+		if(getItem('user')) this.getData() 		
 	}
 
 	async getData() {

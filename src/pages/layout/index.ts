@@ -20,10 +20,7 @@ export class LayoutComponent implements  OnInit{
 
   // 当用户信息失效或被清除时，退出登录界面
   ngOnInit() { 
-  	if(!getItem('user')) {
-  		this.router.navigate(['/login'])
-  	}
-
+  	if(!getItem('user')) this.router.navigate(['/login'])
   }
   
   // 退出登录方法

@@ -38,7 +38,7 @@ export class LoginComponent {
 
         console.log('resultData==>', resultData)
 	    setItem('user', {userId: '123', userName: this.username, token: resultData.data.token}, false)
-	    this.router.navigate(['/home'])
+	    this.router.navigate(['/pages/home'])
 	}
 	// 点击用户删除方法
   delTutorial(index) {

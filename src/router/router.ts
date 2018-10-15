@@ -30,35 +30,17 @@ const roleNames = {
 }
 
 export const routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full', roots: [] },
+  { path: '', redirectTo: '/pages/home', pathMatch: 'full', roots: [] },
   { 
-    path: 'home', 
+    path: 'pages', 
     component: LayoutComponent,
     children: [
-      {path: '', component: HomeComponent}, 
+      {path: 'home', component: HomeComponent}, 
+      {path: 'page_one', component: PageoneComponent}, 
+      {path: 'page_two', component: PagetwoComponent},
+      {path: 'page_three', component: PagethreeComponent}, 
     ]
-  },
-  { 
-    path: 'page_one', 
-    component: LayoutComponent,
-    children: [
-      {path: '', component: PageoneComponent}, 
-    ]
-  },
-  { 
-    path: 'page_two', 
-    component: LayoutComponent,
-    children: [
-      {path: '', component: PagetwoComponent}, 
-    ]
-  },
-  { 
-    path: 'page_three', 
-    component: LayoutComponent,
-    children: [
-      {path: '', component: PagethreeComponent}, 
-    ]
-  },
+  }
 ];
 
 export const COMPONENTS = [
