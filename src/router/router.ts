@@ -16,14 +16,9 @@ export const pagesRoutes = [
       {
         path: 'demo',
         children: [
-          { path: '', 
-            component: PageoneComponent, 
-            roots: [1, 3, 4],
-            children: [
-              { path: 'page_one', component: PagethreeComponent, roots: ['all'] }
-            ] 
-          }, 
-          { path: 'page_two', component: PagetwoComponent, roots: ['all'] }
+          { path: 'page_one', component: PageoneComponent, roots: [1, 3, 4] }, 
+          { path: 'page_two', component: PagetwoComponent, roots: ['all'] },
+          { path: 'page_three', component: PagethreeComponent, roots: ['all'] }
         ]
       }
 ];
