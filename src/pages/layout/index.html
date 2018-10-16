@@ -6,15 +6,16 @@
            {{ !isCollapsed ? 'XX管理系统' : 'XX...' }} 
         </div>
         <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+          <li _ngcontent-c0="" routerLink="home" nz-menu-item="" class="ant-menu-item" style="padding-left: 24px;"><span _ngcontent-c0=""><i _ngcontent-c0="" class="anticon anticon-file"></i><span _ngcontent-c0="" class="nav-text">Home</span></span></li>
           <li nz-submenu>
         <span title><i class="anticon anticon-setting"></i>demo页面</span>
         <ul>
-          <li nz-menu-item routerLink="home">home</li>
-          <li nz-menu-item routerLink="page_one">page1</li>
-          <li nz-menu-item routerLink="page_two">page2</li>
+          <li nz-menu-item routerLink="demo/page_one">page1</li>
+          <li nz-menu-item routerLink="demo/page_two">page2</li>
+           <li nz-menu-item routerLink="demo/page_three">page3</li>
         </ul>
       </li>
-        <li _ngcontent-c0="" nz-menu-item="" class="ant-menu-item" style="padding-left: 24px;"><span _ngcontent-c0=""><i _ngcontent-c0="" class="anticon anticon-file"></i><span _ngcontent-c0="" class="nav-text">File</span></span></li>
+      
         </ul>
       </nz-sider>
       <nz-layout>

@@ -12,10 +12,12 @@ import { httpInterceptorProviders } from 'api/base-interceptor'; // http监听
 import { AdminModule } from 'admin/admin.module'; // admin模块
 import { StoreModule } from '@ngrx/store'; // ngrx模块
 import { reducerConfig } from 'ngrx/reducers/index';
+import { LoginComponent }  from 'pages/login/login';
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [ // 该模块包含的组件和指令有哪些
+      LoginComponent,
   		AppComponent
   	],
   imports: [ // 该模块依赖的模块有哪些

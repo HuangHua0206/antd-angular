@@ -16,7 +16,6 @@ export class LayoutComponent implements  OnInit{
    public menus: any = menus;
  
   constructor(private router: Router) {}
- 
 
   // 当用户信息失效或被清除时，退出登录界面
   ngOnInit() { 
