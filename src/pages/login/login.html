@@ -14,18 +14,4 @@
 	    登录</button>
     <!-- 	<ng-template #suffixTemplate><i class="anticon anticon-close-circle" (click)="username=null" *ngIf="username"></i></ng-template> -->
 	</div>
-	<div *ngIf='tutorials'>
-  <h3>Tutorials</h3>
-  <ul>
-    <!-- async 必须有，否则收不到数据了 -->
-    <li (click)="delTutorial(i)" *ngFor="let tutorial of tutorials | async;let i = index">
-      <a [href]="tutorial.url">{{tutorial.name}}</a>
-    </li>
-  </ul>
-</div>
-<div>
-  <input type="text" #name>
-  <input type="text" #url>
-  <button (click)="addTutorial(name.value, url.value)">create</button>
-</div>
 </div>

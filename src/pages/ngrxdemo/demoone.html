@@ -1,0 +1,12 @@
+<div>
+  <h2>ngrx展示</h2>
+  <input nz-input placeholder="姓名" [(ngModel)]="name" style="width:300px;margin-right: 20px">
+  <nz-input-number nzPlaceHolder="年龄" [(ngModel)]="age"  style="width:300px;margin-right: 20px" [nzMin]="1" [nzMax]="100" [nzStep]="1"></nz-input-number>
+  <button nz-button nzType="primary" (click)="addPerson()">添加</button>
+  <h3>数据展示</h3>
+  <ul>
+  	<li *ngFor="let item of demos | async">
+  		{{item.name}}/{{item.age}}
+  	</li>
+  </ul>
+</div>

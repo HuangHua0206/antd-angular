@@ -3,6 +3,7 @@ export interface Tutorial {
   url: string;
 }
 
-export interface menus {
-	
+export interface Demos {
+	name: string;
+	age: number;
 }

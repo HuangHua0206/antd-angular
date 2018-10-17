@@ -1,5 +1,4 @@
-import { reducer } from 'app/tutorial.reducers'
-
+import demos from 'ngrx/reducers/demo.reducer'
 export const reducerConfig = {
-	tutorial: reducer
+	demos
 }

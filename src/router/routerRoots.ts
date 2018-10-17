@@ -1,7 +1,9 @@
 
 import { getItem } from 'utils/storage';
 // 登录接口返回角色类型
-const role = getItem('user') ? getItem('user').role : [];
+ console.log(getItem('user'), 'ooo')
+  const role = getItem('user') ? getItem('user').role : [];
+
 // 角色类型
 const roles = {
   'superadmin': ['超级管理员', 'r1'],

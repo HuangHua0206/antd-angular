@@ -1,5 +1,5 @@
-import { Tutorial } from 'app/tutorial.module'
+import { Demos } from 'ngrx/states/models'
 
 export interface AppState {
-  readonly tutorial: Tutorial[];
+  readonly demos: Demos[];
 }
