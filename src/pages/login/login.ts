@@ -37,7 +37,7 @@ export class LoginComponent {
 		const resultData =  await this.loginService.login(o)  
 
         console.log('resultData==>', resultData)
-	    setItem('user', {userId: '123', userName: this.username, token: resultData.data.token}, false)
+	    setItem('user', {userId: '123', userName: this.username, token: resultData.data.token, role: resultData.data.role}, false)
 	    this.router.navigate(['/pages/home'])
 	}
 	// 点击用户删除方法

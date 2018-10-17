@@ -5,18 +5,37 @@
         <div class="logo" >
            {{ !isCollapsed ? 'XX管理系统' : 'XX...' }} 
         </div>
-        <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-          <li _ngcontent-c0="" routerLink="home" nz-menu-item="" class="ant-menu-item" style="padding-left: 24px;"><span _ngcontent-c0=""><i _ngcontent-c0="" class="anticon anticon-file"></i><span _ngcontent-c0="" class="nav-text">Home</span></span></li>
-          <li nz-submenu>
-        <span title><i class="anticon anticon-setting"></i>demo页面</span>
-        <ul>
-          <li nz-menu-item routerLink="demo/page_one">page1</li>
-          <li nz-menu-item routerLink="demo/page_two">page2</li>
-           <li nz-menu-item routerLink="demo/page_three">page3</li>
-        </ul>
-      </li>
-      
-        </ul>
+        <div nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+          <div *ngFor="let item of menus">
+            <div  
+              _ngcontent-c0 
+              *ngIf="!item.children" 
+              routerLink="{{item.path}}" 
+              nz-menu-item 
+              class="ant-menu-item" 
+              nzSelected="{{router.url === '/pages/'+ item.path}}"
+              style="padding-left: 24px;">
+                <span _ngcontent-c0>
+                  <i _ngcontent-c0="" class="anticon anticon-{{item.icon}}"></i>
+                  <span _ngcontent-c0="" class="nav-text">{{item.title}}</span>
+                </span>
+            </div>
+            <div nz-submenu *ngIf="item.children" >
+                <span title>
+                  <i class="anticon anticon-{{item.icon}}"></i>{{item.title}}
+                </span>
+                <ul >
+                  <li 
+                    *ngFor="let subitem of item.children" 
+                    nz-menu-item 
+                    routerLink="{{'/pages/' + item.path + '/' + subitem.path}}"
+                    nzSelected="{{router.url === '/pages/' + item.path + '/' + subitem.path}}"
+                    >{{subitem.title}}
+                  </li>
+                </ul>
+            </div> 
+          </div>
+        </div>
       </nz-sider>
       <nz-layout>
         <nz-header style="background: #fff; padding:0;">

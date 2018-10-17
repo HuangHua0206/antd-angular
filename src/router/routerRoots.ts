@@ -1,7 +1,6 @@
-import { pagesRoutes } from 'router/router'
-import { LayoutComponent }  from 'pages/layout/index';
-const role = ['admin', 'reviewer'];
-
+import { getItem } from 'utils/storage';
+// const role = ['admin', 'reviewer'];
+const role = getItem('user') ? getItem('user').role : [];
 // 角色类型
 const roles = {
   'superadmin': ['超级管理员', 'r1'],
@@ -50,18 +49,3 @@ export function filterComponent(pagesRoutes) {
   return components;
 }
 
-// admin路由框架
-export const routes = [
-  { path: '', redirectTo: '/pages/home', pathMatch: 'full' }, 
-  { 
-    path: 'pages', 
-    component: LayoutComponent,
-    children: filterRoots(pagesRoutes) || []
-  }
-]
-
-// componets
-export const COMPONENTS = [
-	LayoutComponent,
-	...filterComponent(pagesRoutes)
-]
