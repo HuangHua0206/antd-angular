@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms'; // 双向数据绑定表单模块
 import { AdminRoutingModule }     from 'admin/admin-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { LayoutComponent }  from 'pages/layout/index';
-import { filterComponent } from 'router/routerRoots'
-import { pagesRoutes } from 'router/router'
+import { menuComponents } from 'router/router'
+
 @NgModule({
   declarations: [ // 该模块包含的组件和指令有哪些
 		LayoutComponent,
-		...filterComponent(pagesRoutes)
+		...menuComponents
   	],
   imports: [ // 该模块依赖的模块有哪些
-    BrowserAnimationsModule,
+      BrowserAnimationsModule,
 	  FormsModule,
-    NgZorroAntdModule,
+      NgZorroAntdModule,
 	  AdminRoutingModule
   ]
 })

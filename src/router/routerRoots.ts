@@ -1,5 +1,6 @@
+
 import { getItem } from 'utils/storage';
-// const role = ['admin', 'reviewer'];
+// 登录接口返回角色类型
 const role = getItem('user') ? getItem('user').role : [];
 // 角色类型
 const roles = {
@@ -16,9 +17,7 @@ const roles = {
 // 递归过滤不符合角色权限的路由
 export function filterRoots(pagesRoutes) {
   const rolesNum = []
-  role.forEach(item => {
-    rolesNum.push(Number(roles[item][1].charAt(1)))
-  })
+  role.forEach(item => rolesNum.push(Number(roles[item][1].charAt(1))))
   const newRoutes = []
   for(let item of pagesRoutes) {
     if(!item.children) {

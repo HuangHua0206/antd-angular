@@ -1,7 +1,6 @@
 import { NgModule }             from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
-import { pagesRoutes } from 'router/router'
-import { filterRoots, filterComponent } from 'router/routerRoots'
+import { menuRoutes } from 'router/router'
 import { LayoutComponent }  from 'pages/layout/index';
 const config: ExtraOptions = {
   useHash: true,
@@ -12,7 +11,7 @@ export const routes = [
   { 
     path: 'pages', 
     component: LayoutComponent,
-    children: filterRoots(pagesRoutes) || []
+    children: menuRoutes || []
   }
 ]
 
