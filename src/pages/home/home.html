@@ -2,8 +2,19 @@
  *ngIf="anyList"
   #rowSelectionTable
   [nzData]="anyList"
-  (nzPageIndexChange)="refreshStatus()"
-  (nzPageSizeChange)="refreshStatus()">
+  [nzFrontPagination]="false"
+  [nzTotal]="total"
+  nzSize="middle"
+  [nzBordered]="false"
+  [nzLoading]="loading"
+  [nzPageSize]="pageSize"
+  [nzPageIndex]="pageNum"
+  nzTitle="示例表格"
+  nzFooter="备注：xxx"
+  [nzPageSizeOptions]="[ 10, 20, 30, 40, 50 ]"
+  [nzShowSizeChanger]="true"
+  (nzPageIndexChange)="change(nzPageIndex)"
+  (nzPageSizeChange)="getData()">
   <thead>
     <tr>
       <th nzShowCheckbox [(nzChecked)]="allChecked" [nzIndeterminate]="indeterminate" (nzCheckedChange)="checkAll($event)"></th>

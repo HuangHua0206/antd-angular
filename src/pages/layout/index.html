@@ -40,8 +40,8 @@
         <nz-header style="background: #fff; padding:0;">
           <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
           <ul nz-menu  style="line-height:64px;height:64px;float: right;border-right:0;">
-            <li style="line-height:64px;height:64px;float: left;" nz-menu-item>欢迎您！ 【 {{username}} 】</li>
-            <li (click)="logout()" style="line-height:64px;height:64px;color:#1890ff;float: left;" nz-menu-item>退出</li>
+            <li style="line-height:64px;height:64px;float: left;margin-right: 20px"  >欢迎您！ 【 {{username}} 】</li>
+            <li (click)="logout()" style="line-height:64px;height:64px;color:#1890ff;float: left;margin-right: 20px"  >退出</li>
           </ul>
         </nz-header>
         <nz-content style="margin:0 16px;">
