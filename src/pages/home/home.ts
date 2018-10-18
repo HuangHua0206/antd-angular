@@ -7,7 +7,7 @@ import { getItem } from 'utils/storage';
   templateUrl: './home.html'
 })
 export class HomeComponent {
-	private anyList
+	private anyList = []
 	private pageSize = 15
 	private total = 0
 	private pageNum = 1
@@ -26,7 +26,7 @@ export class HomeComponent {
 		this.anyList = resultData.data
 		this.total = resultData.total
 	}
-	change(number) {
-		console.log(number)
+	currentPageDataChange($event): void {
+		console.log($event)
 	}
 }

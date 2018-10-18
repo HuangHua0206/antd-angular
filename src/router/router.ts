@@ -16,7 +16,7 @@ const pagesRoutes = [
   { path: 'home', component: HomeComponent, roots: ['all'], title: 'Home', icon: 'appstore' }, 
   {
     path: 'demo',
-    title: '示例页面',
+    title: '父子组件',
     icon: 'file',
     children: [
       { path: 'page_one', component: PageoneComponent, roots: [1, 2, 3], title: '页面1' }, 
