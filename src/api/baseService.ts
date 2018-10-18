@@ -6,7 +6,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NzMessageService } from 'ng-zorro-antd';
-import { getItem } from '@utils/storage';
+import { getItem } from 'utils/storage';
 
 
 @Injectable({ providedIn: 'root' })

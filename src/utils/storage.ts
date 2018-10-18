@@ -8,6 +8,7 @@
  *  value   any       储存值
  *  save    Boolean   true表示用localStorage储存，false表示用sessionStorage
  */
+console.log('storage')
 export function setItem(key, value, save) {
   if (typeof (value) === 'undefined') {
     return false

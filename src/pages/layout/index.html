@@ -5,26 +5,43 @@
         <div class="logo" >
            {{ !isCollapsed ? 'XX管理系统' : 'XX...' }} 
         </div>
-        <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-          <li nz-submenu routerLink="/home">
-            <span title><i class="anticon anticon-user"></i><span class="nav-text">待审核</span></span>
-          </li>
-          <li nz-submenu>
-            <span title><i class="anticon anticon-team"></i><span class="nav-text">重点关注</span></span>
-            <ul>
-              <li nz-menu-item routerLink="/page_one">页面1</li>
-              <li nz-menu-item routerLink="/page_two">页面2</li>
-            </ul>
-          </li>
-          <li nz-menu-item><span><i class="anticon anticon-file"></i><span class="nav-text">File</span></span></li>
-        </ul>
+        <div nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+          <div *ngFor="let item of menus">
+            <div  
+              _ngcontent-c0 
+              *ngIf="!item.children" 
+              routerLink="{{item.path}}" 
+              nz-menu-item 
+              class="ant-menu-item" 
+              nzSelected="{{router.url === '/pages/'+ item.path}}">
+                <span _ngcontent-c0>
+                  <i _ngcontent-c0="" class="anticon anticon-{{item.icon}}"></i>
+                  <span _ngcontent-c0="" class="nav-text">{{item.title}}</span>
+                </span>
+            </div>
+            <div nz-submenu *ngIf="item.children" >
+                <span title>
+                  <i class="anticon anticon-{{item.icon}}"></i>{{item.title}}
+                </span>
+                <ul >
+                  <li 
+                    *ngFor="let subitem of item.children" 
+                    nz-menu-item 
+                    routerLink="{{'/pages/' + item.path + '/' + subitem.path}}"
+                    nzSelected="{{router.url === '/pages/' + item.path + '/' + subitem.path}}"
+                    >{{subitem.title}}
+                  </li>
+                </ul>
+            </div> 
+          </div>
+        </div>
       </nz-sider>
       <nz-layout>
         <nz-header style="background: #fff; padding:0;">
           <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
           <ul nz-menu  style="line-height:64px;height:64px;float: right;border-right:0;">
-            <li style="line-height:64px;height:64px;float: left;" nz-menu-item>欢迎您！ 【 {{username}} 】</li>
-            <li (click)="logout()" style="line-height:64px;height:64px;color:#1890ff;float: left;" nz-menu-item>退出</li>
+            <li style="line-height:64px;height:64px;float: left;margin-right: 20px"  >欢迎您！ 【 {{username}} 】</li>
+            <li (click)="logout()" style="line-height:64px;height:64px;color:#1890ff;float: left;margin-right: 20px"  >退出</li>
           </ul>
         </nz-header>
         <nz-content style="margin:0 16px;">

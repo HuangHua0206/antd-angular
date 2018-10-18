@@ -1,6 +1,6 @@
 import { NgModule }             from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
-import { LoginComponent }  from '@pages/login/login'; 
+import { LoginComponent }  from 'pages/login/login'; 
 const config: ExtraOptions = {
   useHash: true,
 };

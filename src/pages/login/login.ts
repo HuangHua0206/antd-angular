@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, Route } from '@angular/router';
-import { setItem } from '@utils/storage';
-import { LoginService } from '@api/loginService';
+import { setItem } from 'utils/storage';
+import { LoginService } from 'api/loginService';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +11,10 @@ import { LoginService } from '@api/loginService';
 export class LoginComponent {
 	username = ''
 	password = ''
-
 	constructor(
 		private router: Router,
 		private loginService: LoginService
-	) {}
+	) { }
 	async Login() {
 		const o = {
       		mobile: "13627140650",
@@ -27,7 +26,7 @@ export class LoginComponent {
 		const resultData =  await this.loginService.login(o)  
 
         console.log('resultData==>', resultData)
-	    setItem('user', {userId: '123', userName: this.username, token: resultData.data.token}, false)
-	    this.router.navigate(['/home'])
+	    setItem('user', {userId: '123', userName: this.username, token: resultData.data.token, role: resultData.data.role}, false)
+	    this.router.navigate(['/pages/home'])
 	}
 }

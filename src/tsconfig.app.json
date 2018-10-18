@@ -5,15 +5,17 @@
     "types": [],
     "baseUrl": "",
     "paths": {
-      "@admin/*": ["admin/*"],
-      "@api/*": ["api/*"],
-      "@app/*": ["app/*"],
-      "@components/*": ["components/*"],
-      "@environments/*": ["environments/*"],
-      "@less/*": ["less/*"],
-      "@pages/*": ["pages/*"],
-      "@router/*": ["router/*"],
-      "@utils/*": ["utils/*"],
+      "@src/*": ["*"],
+      "admin/*": ["admin/*"],
+      "api/*": ["api/*"],
+      "app/*": ["app/*"],
+      "components/*": ["components/*"],
+      "environments/*": ["environments/*"],
+      "less/*": ["less/*"],
+      "ngrx/*": ["ngrx/*"],
+      "pages/*": ["pages/*"],
+      "router/*": ["router/*"],
+      "utils/*": ["utils/*"]
     }
   },
   "exclude": [
