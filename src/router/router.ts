@@ -13,15 +13,15 @@ import { DemotwoComponent } from 'pages/ngrxdemo/demotwo';
 // 路由在此添加
 // 侧边栏路由（单独写考虑layout侧边栏可直接使用此路由数据）
 const pagesRoutes = [
-  { path: 'home', component: HomeComponent, roots: ['all'], title: 'Home', icon: 'appstore' }, 
+  { path: 'home', component: HomeComponent, roots: ['all'], title: '接口请求', icon: 'appstore' }, 
   {
     path: 'demo',
     title: '父子组件',
     icon: 'file',
     children: [
-      { path: 'page_one', component: PageoneComponent, roots: [1, 2, 3], title: '页面1' }, 
+      { path: 'page_one', component: PageoneComponent, roots: [1, 2, 3], title: '父传子' }, 
       { path: 'page_two', component: PagetwoComponent, roots: [3], title: '页面2' },
-      { path: 'page_three', component: PagethreeComponent, roots: ['all'], title: '页面3' }
+      { path: 'page_three', component: PagethreeComponent, roots: ['all'], title: '子传父' }
     ]
   },
   {

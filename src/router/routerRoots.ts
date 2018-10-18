@@ -16,7 +16,7 @@ const roles = {
 }
 
 
-// 递归过滤不符合角色权限的路由
+// 递归过滤符合角色权限的路由
 export function filterRoots(pagesRoutes) {
   const rolesNum = []
   role.forEach(item => rolesNum.push(Number(roles[item][1].charAt(1))))
