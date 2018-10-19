@@ -5,7 +5,8 @@ const config: ExtraOptions = {
   useHash: true,
 };
 export const routes = [
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'pages', loadChildren: 'admin/admin.module#AdminModule' },
 ];
  
 @NgModule({

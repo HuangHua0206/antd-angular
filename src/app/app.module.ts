@@ -9,7 +9,6 @@ import { AppRoutingModule } from 'app/app-routing.module'; // app模块-路由�
 import { HttpClientModule } from '@angular/common/http';  // http请求模块
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';  // antd相关
 import { httpInterceptorProviders } from 'api/base-interceptor'; // http监听
-import { AdminModule } from 'admin/admin.module'; // admin模块
 import { StoreModule } from '@ngrx/store'; // ngrx模块
 import { reducerConfig } from 'ngrx/reducers/index';
 import { LoginComponent }  from 'pages/login/login';
@@ -27,7 +26,6 @@ registerLocaleData(zh);
     NgZorroAntdModule,
 	  HttpClientModule,
 	  AppRoutingModule,
-	  AdminModule,
     StoreModule.forRoot(reducerConfig)
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }, ...httpInterceptorProviders],

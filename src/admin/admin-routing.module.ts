@@ -2,14 +2,12 @@ import { NgModule }             from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { menuRoutes } from 'router/router'
 import { LayoutComponent }  from 'pages/layout/index';
-const config: ExtraOptions = {
-  useHash: true,
-};
+ 
 // admin路由框架
 export const routes = [
   { path: '', redirectTo: '/pages/home', pathMatch: 'full' }, 
   { 
-    path: 'pages', 
+    path: '', 
     component: LayoutComponent,
     children: menuRoutes || []
   }
@@ -19,7 +17,7 @@ export const routes = [
 @NgModule({
 	
     imports: [ 
-	    RouterModule.forRoot(routes, config)
+	    RouterModule.forChild(routes)
     ],
     
     exports: [ RouterModule ]
