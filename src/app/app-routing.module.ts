@@ -6,6 +6,7 @@ const config: ExtraOptions = {
 };
 export const routes = [
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/pages/home', pathMatch: 'full' }, 
   { path: 'pages', loadChildren: 'admin/admin.module#AdminModule' },
 ];
  

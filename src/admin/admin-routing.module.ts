@@ -5,7 +5,6 @@ import { LayoutComponent }  from 'pages/layout/index';
  
 // admin路由框架
 export const routes = [
-  { path: '', redirectTo: '/pages/home', pathMatch: 'full' }, 
   { 
     path: '', 
     component: LayoutComponent,
