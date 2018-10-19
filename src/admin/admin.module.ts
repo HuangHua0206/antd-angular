@@ -5,7 +5,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { LayoutComponent }  from 'pages/layout/index';
 import { menuComponents } from 'router/router';
 import {CommonModule} from "@angular/common";
-console.log('admin')
+
 @NgModule({
   declarations: [ // 该模块包含的组件和指令有哪些
 		LayoutComponent,

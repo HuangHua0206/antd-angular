@@ -1,8 +1,6 @@
-
 import { getItem } from 'utils/storage';
 // 登录接口返回角色类型
- console.log(getItem('user'), 'ooo')
-  const role = getItem('user') ? getItem('user').role : [];
+const role = getItem('user') ? getItem('user').role : [];
 
 // 角色类型
 const roles = {

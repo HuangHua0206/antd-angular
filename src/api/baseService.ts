@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NzMessageService } from 'ng-zorro-antd';
 import { getItem } from 'utils/storage';
-
+import { environment } from 'environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class BaseService {
@@ -24,14 +24,10 @@ export class BaseService {
   public request(params: any): any {
  
     // 本地mock情况下
-    if (getItem('isTest')) { 
-      params['method'] = 'get'
-      params['url'] = window.location.origin + params['testUrl']
-      /*设置请求的基地址，方便替换*/
-    } else {
-      delete params['testUrl']
+    if(!environment.production && getItem('isTest')) {
+        params['method'] = 'get'
+        params['url'] = window.location.origin + params['testUrl']
     }
-
 
     for(let [key, value] of Object.entries(params['data'])) {
       if(value === null) {
