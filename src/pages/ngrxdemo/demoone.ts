@@ -17,7 +17,6 @@ export class DemooneComponent {
 		console.log(store.select('tutorial'), 'store')
 	}
 	addPerson() {
-		console.log(this.name, this.age)
 		this.store.dispatch(new DemoActions.AddDemo({name: this.name, age: this.age}));
 	}
 }

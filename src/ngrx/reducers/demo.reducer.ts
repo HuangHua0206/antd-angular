@@ -8,8 +8,6 @@ const initialState: Demos = {
 }
 
 export default function reducer(state: Demos[] = [initialState], action ) {
-	console.log('reducer>state:', state)
-  	console.log('reducer>action:', action)
   	switch(action.type) {
   		case DemoActions.ADD_DEMO:
   			return [action.payload, ...state]

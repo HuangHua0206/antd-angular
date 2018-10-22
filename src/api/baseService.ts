@@ -82,7 +82,6 @@ export class BaseService {
    *  res
    */
   private handleSuccess(res) {
-    console.log(res, 'res')
     /* 根据不同接口习惯，这里默认code为0是成功，1是接口出错，可根据项目修改*/
     if(res.code === 0) {
       return res

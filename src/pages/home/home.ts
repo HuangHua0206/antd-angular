@@ -27,7 +27,4 @@ export class HomeComponent {
 		this.anyList = resultData.data
 		this.total = resultData.total
 	}
-	currentPageDataChange($event): void {
-		console.log($event)
-	}
 }
