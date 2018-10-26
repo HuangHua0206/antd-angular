@@ -10,7 +10,7 @@ export class LoginService {
   login(oData) {
   	return this.baseService.request({
       method: 'POST',
-      testUrl: "/assets/json/login.json",
+      testUrl: "/json/login.json",
       url: "xxx",
       data: oData,
     });

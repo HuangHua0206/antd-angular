@@ -10,7 +10,7 @@ export class HomeService {
   getHomeList(oParams) {
   	return this.baseService.request({
       method: 'get',
-      testUrl: "/assets/json/list.json",
+      testUrl: "/json/list.json",
       url: 'xxx',
       data: oParams,
     });

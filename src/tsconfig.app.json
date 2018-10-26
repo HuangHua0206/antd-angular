@@ -6,15 +6,15 @@
     "baseUrl": "",
     "paths": {
       "@src/*": ["*"],
-      "admin/*": ["admin/*"],
+      "admin/*": ["app/admin/*"],
       "api/*": ["api/*"],
       "app/*": ["app/*"],
       "components/*": ["components/*"],
       "environments/*": ["environments/*"],
       "less/*": ["less/*"],
       "ngrx/*": ["ngrx/*"],
-      "pages/*": ["pages/*"],
-      "router/*": ["router/*"],
+      "pages/*": ["app/admin/pages/*"],
+      "router/*": ["app/admin/router/*"],
       "utils/*": ["utils/*"]
     }
   },
